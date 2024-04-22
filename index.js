@@ -49,3 +49,21 @@ console.log(texteAffichage);
 // console.log(texteAffichage);
 
 // _________________________________________________________________________________________________________________
+
+// Exercice 3 / OK
+
+let playlist = ["A kind of magic", "We are the champions", "The show must go on"];
+
+playlist.push("Innuendo");
+playlist.push("Radio Gaga");
+
+playlist.pop();
+
+console.log(playlist);
+
+// BONUS LE NOMBRE DE MORCEAUX DANS LA PLAYLIST
+
+// let totalMorceaux = playlist.length;
+// console.log(totalMorceaux);
+
+// _________________________________________________________________________________________________________________
