@@ -89,3 +89,36 @@ Vérifiez avec des console.log si le score final est correct.
 
 - Recommencez une troisième fois pour la dernière case du tableau !
   Vous remarquerez peut-être que certaines portions de code vont beaucoup se ressembler dans cet exercice. Pas d'inquiétude, c’est normal à ce stade !
+
+## Exercice 5
+
+Jusqu’à maintenant, nous avons répété trois fois les mêmes instructions dans notre projet :
+
+- 3 “prompts”, qui nous ont permis de demander des mots à l’utilisateur ;
+- 3 fois le test pour vérifier que le mot tapé par l’utilisateur est correct.
+
+Je vous propose de factoriser ce code, c'est-à-dire de mettre en commun les parties répétées à l’aide d'une boucle.
+
+1. répétez votre code avec une boucle
+   Dans ce dossier [GitHub](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P2-C2---Conditions), le tableau listeMots contient 3 mots : “Cachalot”, “Pétunia” et “Serviette”. Pour chacun de ces mots, à l’aide d’une boucle for :
+
+- demandez à l’utilisateur de le retaper avec prompt ;
+- comptez un point par mot correctement tapé ;
+- affichez le score à la fin avec un console.log.
+
+Gardez en tête que l’emplacement des instructions est particulièrement important pour le fonctionnement du code ! Ce qui se trouve dans le bloc d’instruction de la boucle est répété, mais pas ce qui est à l’extérieur.
+Ici, votre objectif est de répéter certaines instructions comme le prompt, mais pas toutes les instructions (le score, lui, ne doit pas être affiché).
+
+2.  proposez deux types de listes de mots
+    Pour rendre le jeu plus engageant, nous voulons que l’utilisateur puisse avoir le choix entre deux listes de mots différentes : une liste avec des mots et une liste avec des phrases.
+
+- Déclarez un tableau listePhrases qui contient 3 courtes phrases : “Pas de panique !”, “La vie, l’univers et le reste”, “Merci pour le poisson”.
+- Demandez à l’utilisateur s’il veut la liste de mots ou la liste de phrases. Répétez la question tant que l’utilisateur n’a pas écrit “mots” ou “phrases”.
+- Lancez votre boucle for, avec la liste que l’utilisateur a choisie.
+
+Pour cet exercice, vous pouvez copier deux fois la boucle de jeu :
+
+- une fois dans le if ;
+- une fois dans le else.
+
+Mais bien sûr, il existe d’autres manières de réussir l’exercice !
