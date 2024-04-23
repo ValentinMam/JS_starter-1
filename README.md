@@ -59,3 +59,33 @@ Malheureusement, certains ne sont pas d’accord avec le dernier morceau ajouté
 - Supprimez le dernier morceau ajouté à votre collection.
 
 # CHAPITRE #2
+
+L’utilisateur va devoir recopier un mot qui lui est proposé. Si le mot est correct, son score augmentera, sinon… Eh bien, il ne se passera rien
+
+si “mot tapé par l’utilisateur” == “mot proposé”
+alors “on augmente le score”
+
+## Exercice 4
+
+Vous avez appris à tester un mot dans notre application. Votre objectif est maintenant d’en tester trois à la suite, et toujours pas à pas !
+
+1.  Testez le premier mot
+
+- Déclarez une variable listeMots qui est un tableau.
+  Ce tableau contient trois mots que l’utilisateur devra taper au clavier : “Cachalot”, “Pétunia” et “Serviette”.
+- Déclarez une deuxième variable score, initialisée à 0, qui contiendra le nombre de mots correctement tapés par l’utilisateur.
+- À l’aide de l’instruction prompt, demandez à l’utilisateur de rentrer le mot contenu dans la première case du tableau. N’oubliez pas, la première case d’un tableau est la case numéro zéro !
+- Écrivez une première structure conditionnelle pour savoir si le mot tapé par l’utilisateur est bien celui demandé par l’application.
+
+Si c’est le cas, on augmente la valeur de score de 1.
+Vérifiez avec des console.log si le score final est correct.
+
+2. Testez le second mot
+
+- Demandez à l’utilisateur de rentrer le second mot.
+- Faites une seconde structure conditionnelle pour vérifier si le second mot tapé par l’utilisateur correspond bien au second mot du tableau.
+
+3.  Testez le troisième mot
+
+- Recommencez une troisième fois pour la dernière case du tableau !
+  Vous remarquerez peut-être que certaines portions de code vont beaucoup se ressembler dans cet exercice. Pas d'inquiétude, c’est normal à ce stade !
