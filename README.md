@@ -1,4 +1,6 @@
-# Exercice 1
+# CHAPITRE #1
+
+## Exercice 1
 
 Vous gérez une bibliothèque qui contient 500 livres. Vous décidez de faire les opérations suivantes :
 
@@ -14,7 +16,7 @@ Vous gérez une bibliothèque qui contient 500 livres. Vous décidez de faire le
    Avec TOTAL qui sera remplacé par le contenu de la variable totalLivres.
 4. Affichez cette phrase grâce à l’instruction console.log.
 
-# Exercice 2
+## Exercice 2
 
 Vous êtes chargé de la maintenance d’une borne automatique qui permet de récupérer son billet de cinéma. Vous devez préparer la sortie du prochain film Batman, et faire en sorte que les utilisateurs puissent récupérer un billet pour ce nouveau film.
 
@@ -33,7 +35,7 @@ Vous êtes chargé de la maintenance d’une borne automatique qui permet de ré
 - Créez une variable texteAffichage qui contient cette phrase, avec NOM, NOMDEFILM et NUMERODELASALLE remplacés par leur vraie valeur.
 - Vérifiez le résultat avec un console.log.
 
-# Exercice 3
+## Exercice 3
 
 Vous organisez une soirée avec des amis. Une bonne soirée, c’est souvent une bonne musique ! Mais pour cela, vous devez vous organiser.
 
@@ -55,3 +57,5 @@ Pour plaire à tout le monde, vous décidez de laisser vos amis choisir deux mor
 Malheureusement, certains ne sont pas d’accord avec le dernier morceau ajouté. Il va falloir faire du tri !
 
 - Supprimez le dernier morceau ajouté à votre collection.
+
+# CHAPITRE #2
