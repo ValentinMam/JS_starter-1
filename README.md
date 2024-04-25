@@ -144,3 +144,28 @@ Notre but est maintenant d’améliorer l’organisation et la lisibilité de no
 - Créez un nouveau répertoire appelé “scripts”, et placez-y tous vos fichiers.
 - Vérifiez à nouveau votre code.
 - Pour réussir cette étape, pensez bien à mettre à jour le fichier HTML !
+
+# CHAPITRE #3
+
+## Exercice 7
+
+Dans cet exercice, je vous propose de récupérer plusieurs éléments dont nous aurons besoin dans le chapitre suivant, lorsque nous procéderons à la modification de la page.
+Comme j’aime vous faciliter la vie, j’ai modifié légèrement le projet et réalisé la partie HTML/CSS pour cet exercice. Vous la trouverez [ici](https://github.com/OpenClassrooms-Student-Center/7696886-javascript).
+
+Dans le fichier main.js :
+
+1. Sélectionnez avec la méthode getElementById :
+
+- l’input dans lequel le joueur va écrire son texte ;
+- le bouton de validation.
+
+2. Sélectionnez avec la méthode querySelector :
+
+- l’endroit où le mot proposé sera affiché ;
+- l’endroit où le score sera affiché.
+
+3. Sélectionnez avec la méthode querySelectorAll :
+
+- les boutons radio de choix.
+
+N’oubliez pas de vérifier que la sélection est correcte à chaque fois, en utilisant un console.log !
