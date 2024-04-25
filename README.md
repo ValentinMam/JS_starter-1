@@ -127,7 +127,7 @@ Mais bien sûr, il existe d’autres manières de réussir l’exercice !
 
 1.  découpez votre code en fonctions
 
-Notre but est maintenant d’améliorer l’organisation et la lisibilité de notre code. Je vous propose donc de créer les fonctions suivantes :
+Notre but est maintenant d’améliorer l’organisation et la lisibilité de notre [code](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P2-C3---Les-boucles). Je vous propose donc de créer les fonctions suivantes :
 
 - afficherResultat : cette fonction prend en paramètre le résultat et le nombre total de mots proposés, et affiche le résultat du joueur ;
 - choisirPhrasesOuMots : cette fonction demande à l’utilisateur s’il veut jouer avec des phrases ou des mots.
