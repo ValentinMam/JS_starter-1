@@ -28,5 +28,16 @@ function lancerJeu() {
   let score = 0;
   let nbMotsProposes = 0;
 
+  let btnValiderMot = document.getElementById("btnValiderMot");
+  let inputEcriture = document.getElementById("inputEcriture");
+
+  btnValiderMot.addEventListener("click", function () {
+    console.log(inputEcriture.value);
+  });
+
   afficherResultat(score, nbMotsProposes);
 }
+
+// inputEcriture.addEventListener("value", function () {
+//   console.log("inputEcriture.value");
+// });
