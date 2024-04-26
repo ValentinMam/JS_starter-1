@@ -9,8 +9,14 @@
  * @param {number} score : le score de l'utilisateur
  * @param {number} nbMotsProposes : le nombre de mots proposés à l'utilisateur
  */
+
 function afficherResultat(score, nbMotsProposes) {
-  console.log("Votre score est de " + score + " sur " + nbMotsProposes);
+  // Récupération de la zone dans laquelle on va écrire le score
+  let spanScore = document.querySelector(".zoneScore span");
+  // Ecriture du texte
+  let affichageScore = `${score} / ${nbMotsProposes}`;
+  // On place le texte à l'intérieur du span.
+  spanScore.innerText = affichageScore;
 }
 
 /**

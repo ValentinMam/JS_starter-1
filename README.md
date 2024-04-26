@@ -169,3 +169,12 @@ Dans le fichier main.js :
 - les boutons radio de choix.
 
 N’oubliez pas de vérifier que la sélection est correcte à chaque fois, en utilisant un console.log !
+
+## Exercice 8
+
+Pour l’instant, dans notre application, le résultat apparaît uniquement dans la console. Le but ici va être de mettre à jour la page HTML après avoir joué, de manière à afficher le résultat de la partie.
+Je vous invite à utiliser ce projet sur GitHub, qui reprend ce que nous avons réalisé ensemble. J’y ai intégré une maquette HTML/CSS que vous pourriez cloner. Cependant, vous pouvez également reprendre votre code et développer le projet vous-même, si vous voulez augmenter le niveau de difficulté de l’exercice.
+
+1. Mettez à jour le HTML
+
+- Modifiez la fonction afficherResultat. Cette fonction ne devra plus afficher le résultat en console, mais directement sur la page HTML sous la forme “score / nbMotsProposes”.
