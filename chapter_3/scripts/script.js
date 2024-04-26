@@ -31,7 +31,7 @@ function lancerJeu() {
   // Initialisations
 
   let score = 0;
-  let nbMotsProposes = 0;
+
   let i = 0;
 
   let btnValiderMot = document.getElementById("btnValiderMot");
@@ -39,7 +39,12 @@ function lancerJeu() {
   afficherProposition(listeMots[i]);
   btnValiderMot.addEventListener("click", function () {
     console.log(inputEcriture.value);
+    if (inputEcriture.value === listeMots[i]) {
+      score++;
+    }
     i++;
+    afficherResultat(score, i);
+
     inputEcriture.value = "";
     if (listeMots[i] === undefined) {
       afficherProposition("le jeu est fini !");
@@ -49,9 +54,5 @@ function lancerJeu() {
     }
   });
 
-  afficherResultat(score, nbMotsProposes);
+  afficherResultat(score, i);
 }
-
-// inputEcriture.addEventListener("value", function () {
-//   console.log("inputEcriture.value");
-// });
