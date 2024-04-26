@@ -101,3 +101,24 @@ body.appendChild(nouvelleDiv);
 
 // let body = document.querySelector("body");
 body.innerHTML = div;
+
+// CHAPITRE 3 : Écoutez un événement avec addEventListener avec le mot-clé function
+
+<button id="monBouton">Cliquez-moi !</button>;
+
+let monBouton = document.getElementById("monBouton");
+monBouton.addEventListener("click", function () {
+  console.log("Vous avez cliqué sur le bouton");
+});
+
+// CHAPITRE 3 : Écoutez un événement avec addEventListener avec une fonction fléchée
+
+monBouton.addEventListener("click", () => {
+  console.log("Vous avez cliqué sur le bouton");
+});
+
+// CHAPITRE 3 : récupérez les informations sur un événement avec la variable “event”
+
+document.addEventListener("keydown", (event) => {
+  console.log(event.key);
+});
