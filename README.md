@@ -178,3 +178,45 @@ Je vous invite à utiliser ce projet sur GitHub, qui reprend ce que nous avons r
 1. Mettez à jour le HTML
 
 - Modifiez la fonction afficherResultat. Cette fonction ne devra plus afficher le résultat en console, mais directement sur la page HTML sous la forme “score / nbMotsProposes”.
+
+## Exercice 9
+
+Dans cet exercice, je vous propose de revenir sur plusieurs notions abordées tout au long de cette troisième partie du cours, en modifiant notre projet. Pour le réaliser, je vous conseille de partir du [résultat que nous avons obtenu à l’issue de l’exercice précédent](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P3-C2---Manipulez-un-%C3%A9l%C3%A9ment---Correction-de-l%27exercice)
+
+1. nettoyez le projet
+   Votre première étape consiste à supprimer les éléments qui seront modifiés dans notre projet :
+
+   - mettez en commentaire toutes les méthodes qui utilisent prompt ;
+   - mettez à jour la fonction lancerJeu pour qu’elle ne fasse plus appel à ces fonctions.
+     Vous devez également désactiver temporairement le choix entre la liste des phrases et la liste des mots, de manière à utiliser systématiquement la liste des mots :
+   - mettez à jour la fonction lancerJeu, et commentez ce qui concerne la variable listePhrases.
+
+2. gérez le clic sur le bouton « Valider »
+   À ce stade, le projet n’est plus fonctionnel, il n’est plus possible de jouer. Vous devez donc reconstruire ce que vous avez commenté à la première étape, en interagissant directement avec la page HTML.
+   Votre première étape est de pouvoir réagir au clic sur le bouton “Envoyer” :
+
+   - Dans la fonction lancerJeu, récupérez le bouton de validation et écoutez l’événement click en utilisant la méthode addEventListener.
+   - Testez que cela fonctionne avec un console.log(“j’ai cliqué !”).
+   - Récupérez la balise inputEcriture et placez-la dans une variable.
+   - Dans l’addEventListener, faites un console.log avec la valeur contenue dans cette balise.
+     Pour accéder à la valeur contenue dans la balise inputEcriture, utilisez la propriété value.
+   - Testez en écrivant quelque chose dans le champ, et en vérifiant que la valeur apparaît bien lorsque vous cliquez sur Envoyer.
+
+3. affichez les mots que l’utilisateur doit recopier
+   À ce stade, vous savez comment récupérer le mot que l’utilisateur a écrit, mais vous n’affichez pas encore le mot qu’il devra recopier. Pour réaliser cette mise à jour du code HTML :
+   - à l’extérieur du addEventListener, créez une variable i qui servira de compteur. Dans l’addEventListener, ajoutez 1 à i à chaque fois que l’utilisateur clique sur le bouton Envoyer ;
+   - ajoutez un console.log qui va afficher le mot numéro i du tableau listeMots ;
+   - créez une fonction afficherProposition, qui va prendre en paramètre le mot à afficher, et afficher ce mot dans la div zoneProposition ;
+   - utilisez cette fonction pour afficher les mots à proposer.
+
+Après ces opérations, vous devriez voir apparaître les mots un par un après avoir réalisé ces opérations. Cependant, vous remarquerez peut-être que le mot “undefined” s’affiche lorsqu’il n’y a plus de mots disponibles dans le tableau. Pour régler ce problème :
+
+- ajoutez un test dans l’addEventListener. Si le mot numéro i du tableau vaut undefined, écrivez le message “Le jeu est fini” à la place du mot, et désactivez le bouton de validation. Pour désactiver ce bouton, mettez la propriété disabled de ce bouton à true ;
+- à chaque fois que l’utilisateur clique sur Valider, videz le champ inputEcriture.
+
+4. gérez le score
+   Il nous reste une dernière étape : gérer le score de l’utilisateur.
+   - Dans l’addEventListener, comparez ce qu’a écrit l’utilisateur et le mot proposé. Si ces deux mots sont identiques, augmentez le score.
+   - Dans tous les cas, mettez à jour le score en appelant la fonction de mise à jour du score avec les bons paramètres.
+
+Je vous invite également à vérifier l’intégralité du projet en consultant [ce corrigé sur GitHub](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P3-C4---G%C3%A9rez-les-%C3%A9v%C3%A9nements) Toutes mes félicitations pour votre travail !
