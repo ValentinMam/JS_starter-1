@@ -243,3 +243,15 @@ N’hésitez pas à faire un console.log avec la value du bouton radio sélectio
 - utilisez cette nouvelle variable pour votre traitement à la place de listeMots ;
 - lorsque le joueur clique sur Phrases, modifiez la valeur de listeProposition pour qu’elle corresponde au tableau des phrases. Quand le joueur clique sur Mots, faites de même ;
 - mettez à jour l’affichage.
+
+## Exercice 11
+
+Notre application est fonctionnelle. Notre objectif est maintenant de permettre à l’utilisateur de partager son score avec un ami.
+J’ai donc ajouté un bouton “Partager” à notre projet. Ainsi, au clic sur le bouton, une popup apparaît et affiche un formulaire.
+
+Pour réaliser cet exercice :
+
+- écoutez l’événement submit sur ce nouveau formulaire, et empêchez le comportement par défaut de se produire ;
+- récupérez les valeurs des champs présents ;
+- créez une variable sujet et une variable message, et affichez-les dans la console ;
+- utilisez la méthode afficherEmail que je vous ai préparée, avec les bons arguments pour afficher l’e-mail à envoyer, prérempli avec les bonnes informations.
