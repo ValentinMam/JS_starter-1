@@ -220,3 +220,26 @@ Après ces opérations, vous devriez voir apparaître les mots un par un après 
    - Dans tous les cas, mettez à jour le score en appelant la fonction de mise à jour du score avec les bons paramètres.
 
 Je vous invite également à vérifier l’intégralité du projet en consultant [ce corrigé sur GitHub](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P3-C4---G%C3%A9rez-les-%C3%A9v%C3%A9nements) Toutes mes félicitations pour votre travail !
+
+# CHAPITRE #4
+
+## Exercice 10
+
+Pour l’instant, dans notre application :
+
+- l’utilisateur doit recopier du texte qui provient systématiquement du tableau listeMots ;
+- il y a deux boutons radio pour que l’utilisateur puisse choisir entre “Mots” ou “Phrases”, mais ils ne fonctionnent pas.
+
+L’objectif de cet exercice est de gérer ces boutons radio pour les rendre fonctionnels. Ainsi, à l’issue de l’exercice, lorsque l’utilisateur cliquera sur “Phrases”, il devra recopier une phrase. Inversement, lorsqu’il cliquera sur “Mots”, il devra recopier un mot.
+Pour y parvenir :
+
+1. Écoutez l’événement “change” sur les boutons radio.
+
+N’hésitez pas à faire un console.log avec la value du bouton radio sélectionné pour tester le résultat.
+
+2. Lorsque cet événement se déclenche, modifiez le texte proposé pour le remplacer par une phrase si l’utilisateur a cliqué sur “Phrases”, ou un mot si l’utilisateur a cliqué sur “Mots”. Pour cela :
+
+- déclarez une nouvelle variable listeProposition initialisée par défaut à listeMots ;
+- utilisez cette nouvelle variable pour votre traitement à la place de listeMots ;
+- lorsque le joueur clique sur Phrases, modifiez la valeur de listeProposition pour qu’elle corresponde au tableau des phrases. Quand le joueur clique sur Mots, faites de même ;
+- mettez à jour l’affichage.
