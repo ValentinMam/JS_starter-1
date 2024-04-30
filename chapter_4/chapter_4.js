@@ -76,20 +76,20 @@ formulaire.addEventListener("submit", (event) => {
 //     <button>Envoyer</button>
 // </form>
 
-const form = document.querySelector("form");
-// Ajout d'un écouteur d'événement sur le formulaire pour écouter le submit
-form.addEventListener("submit", (event) => {
-  // On empêche le comportement par défaut
-  event.preventDefault();
-  // On fait la vérification.
-  const baliseNom = document.getElementById("nom");
-  const valeurNom = baliseNom.value;
-  if (valeurNom === "") {
-    console.log("Le champ nom est vide");
-  } else {
-    console.log("Le champ nom est rempli");
-  }
-});
+// const form = document.querySelector("form");
+// // Ajout d'un écouteur d'événement sur le formulaire pour écouter le submit
+// form.addEventListener("submit", (event) => {
+//   // On empêche le comportement par défaut
+//   event.preventDefault();
+//   // On fait la vérification.
+//   const baliseNom = document.getElementById("nom");
+//   const valeurNom = baliseNom.value;
+//   if (valeurNom === "") {
+//     console.log("Le champ nom est vide");
+//   } else {
+//     console.log("Le champ nom est rempli");
+//   }
+// });
 
 // en supplément, vous pouvez utiliser trim() pour "nettoyer" les tabulations et autres espaces avant  de tester la chaine de caractères.
 
@@ -113,3 +113,50 @@ let chaine = "cachalot"; // Testez avec des chiffres pour voir la différence
 let regex = new RegExp("^[a-z]+$");
 let resultat = regex.test(chaine);
 console.log(resultat); // Affiche true.
+
+// GESTION DES ERREURS : if / else pour gérer les erreurs courantes
+
+let maVariable = document.getElementById("idInexistant");
+maVariable.createElement("div");
+
+// declenche une erreur = gestion non optimisée car nous pourrions avoir besoin de réutiliser cette gestion d'erreur dans une autre partie du projet
+
+// let maVariable = document.getElementById("idInexistant");
+// if (maVariable === null) {
+//   console.log("L'élément n'existe pas");
+// } else {
+//   maVariable.createElement("div");
+//   // suite du traitement...
+// }
+
+try {
+  let maVariable = document.getElementById("idInexistant");
+  maVariable.createElement("div");
+  // suite du traitement
+} catch {
+  console.log("Il y a eu une erreur dans le bloc try");
+}
+
+function verifierChamp(champ) {
+  // Si le champ est vide, on lance une exception
+  if (champ.value === "") {
+    throw new Error(`Le champ ${champ.id} est vide`);
+  }
+}
+
+let form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  try {
+    event.preventDefault();
+    let baliseNom = document.getElementById("nom");
+    verifierChamp(baliseNom);
+    let balisePrenom = document.getElementById("prenom");
+    verifierChamp(balisePrenom);
+    let baliseSurnom = document.getElementById("surnom");
+    verifierChamp(baliseSurnom);
+    // traitement du formulaire
+    // ...
+  } catch (error) {
+    console.log("Une erreur est survenue : " + error.message);
+  }
+});

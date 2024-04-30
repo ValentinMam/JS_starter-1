@@ -269,3 +269,29 @@ Pour ce faire :
 2. Écrivez une fonction validerEmail qui va prendre en paramètre l’e-mail à tester et retourner true si l’e-mail est valide, false sinon.
 3. Utilisez ces deux fonctions avec l’événement submit du formulaire.
 4. Si les deux champs sont valides, affichez l’e-mail. Sinon, affichez seulement un message d’erreur dans la console.
+
+## Exercice 13
+
+Nous pouvons désormais vérifier les champs dans notre [projet](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P4-C3---Valider-la-valeur-de-champs-de-formulaire). Cependant, l’utilisateur ne reçoit pour l’instant aucune notification lorsqu'un problème survient. L’objectif de cet exercice est d’utiliser try catch pour prévenir l’utilisateur si un champ est mal renseigné.
+
+1. scindez la fonction lancerJeu
+   La fonction lancerJeu devient un petit peu trop grand, d’autant plus si nous voulons en plus ajouter de la gestion d’erreur. Votre première étape consiste donc à alléger la fonction, en déportant le traitement du formulaire :
+
+- Créez une fonction gererFormulaire. Cette fonction va prendre en paramètre le score à envoyer, et s’occuper de gérer le formulaire.
+- Utilisez cette fonction dans lancerJeu.
+
+2. affichez les erreurs
+
+- Modifiez les fonctions validerNom et validerEmail : elles ne vont plus retourner true ou false, mais se contenter de lancer une exception en cas d’erreur, avec un message expliquant le problème.
+
+Par exemple “Le nom est trop court” ou “L’e-mail n’est pas valide”.
+
+- Modifiez la méthode gererFormulaire pour ajouter un try catch qui affiche “erreur” dans la console.
+- Créez une nouvelle fonction afficherMessageErreur qui prendra en paramètre le message d’erreur à afficher. Pour afficher ce message, ajoutez en JavaScript un span à la fin de la div .popup.
+
+Attention, si vous cliquez plusieurs fois sur le bouton, il ne faut pas que le message d’erreur apparaisse plusieurs fois !
+
+- Dans le bloc catch, appelez la fonction afficherMessageErreur pour afficher l’erreur.
+- Dans le bloc try, appelez cette fonction pour qu’elle efface le message d’erreur.
+
+Vous pouvez vérifier votre travail en consultant le [corrigé](https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/P4-C4---G%C3%A9rez-les-erreurs-avec-try-catch) et la vidéo.
