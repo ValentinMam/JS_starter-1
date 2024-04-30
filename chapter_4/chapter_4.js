@@ -4,8 +4,8 @@
   /* <input type="text" id="nom" name="nom"> */
 }
 
-let baliseNom = document.getElementById("nom");
-let nom = baliseNom.value;
+let baliseNomGet = document.getElementById("nom");
+let nom = baliseNomGet.value;
 console.log(nom); // affiche ce qui est contenu dans la balise name
 
 {
@@ -50,9 +50,9 @@ console.log(couleur); // affiche la valeur du radio coché
 </form> */
 }
 
-const form = document.querySelector("form");
+const formulaire = document.querySelector("form");
 // Quand on submit
-form.addEventListener("submit", (event) => {
+formulaire.addEventListener("submit", (event) => {
   // On empêche le comportement par défaut
   event.preventDefault();
   console.log("Il n’y a pas eu de rechargement de page");
@@ -62,3 +62,54 @@ form.addEventListener("submit", (event) => {
   console.log(nom);
   console.log(email);
 });
+
+// VALIDATION FORMULAIRE : Vérifiez un champ à l’envoi du formulaire
+
+// <form>
+//     <!-- champ nom -->
+//     <label for="nom">Nom</label>
+//     <input type="text" id="nom" name="nom" placeholder="Votre nom">
+//     <!-- champ email -->
+//     <label for="email">Email</label>
+//     <input type="email" id="email" name="email" placeholder="Votre email">
+//     <!-- bouton de validation -->
+//     <button>Envoyer</button>
+// </form>
+
+const form = document.querySelector("form");
+// Ajout d'un écouteur d'événement sur le formulaire pour écouter le submit
+form.addEventListener("submit", (event) => {
+  // On empêche le comportement par défaut
+  event.preventDefault();
+  // On fait la vérification.
+  const baliseNom = document.getElementById("nom");
+  const valeurNom = baliseNom.value;
+  if (valeurNom === "") {
+    console.log("Le champ nom est vide");
+  } else {
+    console.log("Le champ nom est rempli");
+  }
+});
+
+// en supplément, vous pouvez utiliser trim() pour "nettoyer" les tabulations et autres espaces avant  de tester la chaine de caractères.
+
+// VALIDATION FORMULAIRE : Vérifiez un champ à la saisie d’un champ du formulaire
+
+// •	l’événement input : il se déclenche à chaque fois que l’utilisateur tape une lettre dans le champ ;
+// •	l’événement change : il se déclenche quand l’utilisateur a fini de taper, et sélectionne un autre élément de la page.
+
+const baliseNom = document.getElementById("nom");
+baliseNom.addEventListener("change", (event) => {
+  const valeurNom = event.target.value;
+  if (valeurNom === "") {
+    console.log("Le champ nom est vide");
+  } else {
+    console.log("Le champ nom est rempli");
+  }
+});
+
+// REGEX
+let chaine = "cachalot"; // Testez avec des chiffres pour voir la différence
+let regex = new RegExp("^[a-z]+$");
+let resultat = regex.test(chaine);
+console.log(resultat); // Affiche true.

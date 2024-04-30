@@ -255,3 +255,17 @@ Pour réaliser cet exercice :
 - récupérez les valeurs des champs présents ;
 - créez une variable sujet et une variable message, et affichez-les dans la console ;
 - utilisez la méthode afficherEmail que je vous ai préparée, avec les bons arguments pour afficher l’e-mail à envoyer, prérempli avec les bonnes informations.
+
+## Exercice 12
+
+Notre application contient un formulaire. Mais pour l’instant, rien ne permet de vérifier que les champs sont correctement renseignés avant de lancer l’e-mail. C’est donc tout le but de cet exercice.
+Pour ce faire :
+
+1. Écrivez une fonction validerNom qui va prendre le nom à tester en paramètre et retourner true si le nom est valide, false sinon.
+
+- La fonction doit prendre le nom en paramètre et valider qu’il est correct.
+- La règle est d’avoir un champ avec au moins deux caractères.
+
+2. Écrivez une fonction validerEmail qui va prendre en paramètre l’e-mail à tester et retourner true si l’e-mail est valide, false sinon.
+3. Utilisez ces deux fonctions avec l’événement submit du formulaire.
+4. Si les deux champs sont valides, affichez l’e-mail. Sinon, affichez seulement un message d’erreur dans la console.
